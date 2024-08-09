@@ -6,6 +6,8 @@
 osu!nppp | An osu! Twitch bot supporting !np and !nppp commands.
 > [!IMPORTANT]
 > Both osu! and [tosu](https://tosu.app) are __REQUIRED__ to be open and running for the bot to work properly, otherwise the bot will take an ungodly amount of time to respond and all values will show up as _undefined_.
+
+All code is ran client-sided, and no information is sent/stored to a server other than Twitch.
 ## Usage
 Visit [jarran2r.github.io/osu-nppp](https://jarran2r.github.io/osu-nppp) and follow the steps below.
 1. Click the __Authorize__ button, and authorize the twitch account you want to use as the bot. The token is hidden to prevent accidental leaking.
