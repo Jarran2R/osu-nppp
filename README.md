@@ -17,10 +17,13 @@ Visit [jarran2r.github.io/osu-nppp](https://jarran2r.github.io/osu-nppp) and fol
 > You may not change the token or channel name while the bot is connected, but you can change the cooldown.
 ## Format
 `!np`:
-> @Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;[^1] +Mods[^2] | osu.ppy.sh/b/BeatmapID
+> @Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID
 
 `!nppp`:
-> @Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;[^1] +Mods[^2] | osu.ppy.sh/b/BeatmapID | ###pp[^3] / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp
-[^1]: Mode is only visible if it is not osu!standard.
-[^2]: Mods are only visible if any are selected.
-[^3]: Current pp, only visible if the player is currently playing a map.
+> @Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID | ###pp*** / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp
+
+<sup>*Mode is only visible if it is not osu!standard.</sup>\
+<sup>**Mods are only visible if any are selected.</sup>\
+<sup>***Current pp, only visible if the player is currently playing a map.</sup>
+## License
+osu!nppp is released under the [GNU General Public License v3.0](LICENSE). See `LICENSE` for more info.
