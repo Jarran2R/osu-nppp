@@ -1,6 +1,7 @@
 # osu!nppp
 [![GitHub License](https://img.shields.io/github/license/jarran2r/osu-nppp)](LICENSE)
 [![GitHub top language](https://img.shields.io/github/languages/top/jarran2r/osu-nppp)]()
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/jarran2r/osu-nppp)](https://www.codefactor.io/repository/github/jarran2r/osu-nppp/)
 
 osu!nppp | An osu! Twitch bot supporting !np and !nppp commands.
 > [!IMPORTANT]
