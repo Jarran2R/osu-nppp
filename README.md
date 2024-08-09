@@ -24,8 +24,14 @@ Visit [jarran2r.github.io/osu-nppp](https://jarran2r.github.io/osu-nppp) and fol
 `!nppp`:
 > @Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID | ###pp*** / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp
 
-<sup>*Mode is only visible if it is not osu!standard.</sup>\
-<sup>**Mods are only visible if any are selected.</sup>\
+<sup>*Mode is only visible if it is not osu!standard.</sup>  
+<sup>**Mods are only visible if any are selected.</sup>  
 <sup>***Current pp, only visible if the player is currently playing a map.</sup>
+## Roadmap
+- [ ] Have commands not be case-sensitive
+- [ ] Add `!pp` command for calculating user-defined accuracy of the current beatmap
+- [ ] Clean things up
+  - [ ] Site
+  - [ ] Code
 ## License
 osu!nppp is released under the [GNU General Public License v3.0](LICENSE). See `LICENSE` for more info.
