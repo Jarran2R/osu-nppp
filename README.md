@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="512" src="assets/osu!nppp.svg">
+  <img width="512" src="assets/osu!nppp.png">
 </p>
 
 # osu!nppp
