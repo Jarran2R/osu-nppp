@@ -1,4 +1,9 @@
+<p align="center">
+  <img width="512" src="assets/osu!nppp.svg">
+</p>
+
 # osu!nppp
+
 [![GitHub License](https://img.shields.io/github/license/jarran2r/osu-nppp)](LICENSE)
 [![GitHub top language](https://img.shields.io/github/languages/top/jarran2r/osu-nppp)]()
 [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/jarran2r/osu-nppp)](https://www.codefactor.io/repository/github/jarran2r/osu-nppp/)
@@ -30,8 +35,8 @@ Visit [jarran2r.github.io/osu-nppp](https://jarran2r.github.io/osu-nppp) and fol
 ## Roadmap
 - [ ] Have commands not be case-sensitive
 - [ ] Add `!pp` command for calculating user-defined accuracy of the current beatmap
-- [ ] Clean things up
+- [ ] Organize
   - [ ] Site
-  - [ ] Code
+  - [x] Code
 ## License
 osu!nppp is released under the [GNU General Public License v3.0](LICENSE). See `LICENSE` for more info.
