@@ -16,10 +16,11 @@
 			<input type="text" id="cooldown" name="cooldown" value="15">
 		</form>
 		<p>
-			format: artist - title [difficulty] (mapper) &lt;mode&gt;* | osu.ppy.sh/b/beatmapid | ###pp** / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp<br>
+			format: artist - title [difficulty] (mapper) &lt;mode&gt;* +mods** | osu.ppy.sh/b/beatmapid | ###pp*** / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp<br>
 			<small>
-				*only appears when not osu!standard<br>
-				**only appears when playing a map (not song select)
+				*Mode is only visible if it is not osu!standard.<br>
+				**Mods are only visible if any are selected.<br>
+				***Current pp, only visible if the player is currently playing a map.<br>
 			</small>
 		</p>
 		<p>
@@ -31,5 +32,9 @@
 		</p>
 		<a href="https://github.com/Jarran2R/osu-nppp">GitHub</a>
 	</body>
-	<script src="bot.js"></script>
+	<script src="osu.js"></script>
+	<script src="chat.js"></script>
+	<script src="websocket.js"></script>
+	<script src="auth.js"></script>
+	<script src="main.js"></script>
 </html>
