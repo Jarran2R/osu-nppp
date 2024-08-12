@@ -40,7 +40,7 @@ async function handleWebSocketMessage(data) {
                     console.log(`MSG #${data.payload.event.broadcaster_user_login} <${data.payload.event.chatter_user_login}> ${data.payload.event.message.text}`);
 
                     // Then check to see if that message was "HeyGuys"
-                    switch (data.payload.event.message.text.trim()) {
+                    switch (data.payload.event.message.text.trim().toLowerCase()) {
                         // If so, send back "VoHiYo" to the chatroom
                         case "!nppp":
                             var timeNow = new Date().getTime();
