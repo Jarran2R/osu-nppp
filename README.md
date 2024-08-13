@@ -33,10 +33,10 @@ Visit [jarran2r.github.io/osu-nppp](https://jarran2r.github.io/osu-nppp) and fol
 <sup>**Mods are only visible if any are selected.</sup>  
 <sup>***Current pp, only visible if the player is currently playing a map.</sup>
 ## Roadmap
-- [ ] Have commands not be case-sensitive
+- [x] Have commands not be case-sensitive
 - [ ] Add `!pp` command for calculating user-defined accuracy of the current beatmap
-- [ ] Organize
-  - [ ] Site
+- [x] Organize
+  - [x] Site
   - [x] Code
 ## License
 osu!nppp is released under the [GNU General Public License v3.0](LICENSE). See `LICENSE` for more info.
