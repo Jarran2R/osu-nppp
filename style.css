@@ -18,6 +18,11 @@
     box-shadow: 0px 0px 32px #000000;
 }
 
+.margin {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -48,7 +53,7 @@
 }
 
 .github {
-    font-size: 32px;
+    font-size: 24px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -56,7 +61,7 @@
 }
 
 .license {
-    font-size: 32px;
+    font-size: 24px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -70,6 +75,17 @@ body {
     font-size: 16px;
     max-width: 1024px;
     margin: 0 auto;
+}
+
+hr {
+    border: none;
+    color: #404040;
+    background-color: #404040;
+    height: 1px;
+}
+
+h2 {
+    margin-bottom: 0;
 }
 
 button {
