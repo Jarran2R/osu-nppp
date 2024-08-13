@@ -1,23 +1,32 @@
-const token = document.getElementById("token")
-const authorize = document.getElementById("authorize")
-const username = document.getElementById("username")
-const connect = document.getElementById("connect")
-const cooldown = document.getElementById("cooldown")
+const token = document.getElementById("token");
+const authorize = document.getElementById("authorize");
+const username = document.getElementById("username");
+const connect = document.getElementById("connect");
+const cooldown = document.getElementById("cooldown");
+const message = document.getElementById("message");
 
 token.value = OAUTH_TOKEN;
-console.log("OAuth Token: ", OAUTH_TOKEN);
+
+if (OAUTH_TOKEN) {
+    console.log("OAuth Token: ", OAUTH_TOKEN);
+};
+
+function makeValid() {
+    username.classList.remove("invalid"); // this is purely for cosmetics
+};
 
 function disableForms(value) {
     token.disabled = value;
     authorize.disabled = value;
     username.disabled = value;
     connect.disabled = value;
-}
+};
 
 // Start executing the bot from here
 function connectBot() {
     disableForms(true);
     connect.innerHTML = "Connecting";
+    message.textContent = "";
     if (OAUTH_TOKEN) {
         (async () => {
             // Verify that the authentication is valid
@@ -33,6 +42,8 @@ function connectBot() {
             };
         })();
     } else {
+        token.classList.add("invalid");
+        message.textContent = "No token provided";
         console.error("No token provided");
         disconnectBot();
     };

@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="512" src="assets/osu!nppp.png">
+  <img width="512" src="assets/logo/osu!nppp.png">
 </p>
 
 # osu!nppp
@@ -10,13 +10,13 @@
 
 osu!nppp | An osu! Twitch bot supporting !np and !nppp commands.
 > [!IMPORTANT]
-> Both osu! and [tosu](https://tosu.app) are __REQUIRED__ to be open and running for the bot to work properly, otherwise the bot will take an ungodly amount of time to respond and all values will show up as _undefined_.
+> Both osu! and [tosu](https://tosu.app) are __REQUIRED__ to be open and running for the bot to work properly, otherwise the bot will eventually disconnect after sending a command.
 
-All code is ran client-sided, and no information is sent/stored to a server other than Twitch.
+All code is ran client-sided, and no information is sent/stored to any server other than Twitch.
 ## Usage
 Visit [jarran2r.github.io/osu-nppp](https://jarran2r.github.io/osu-nppp) and follow the steps below.
 1. Click the __Authorize__ button, and authorize the twitch account you want to use as the bot. The token is hidden to prevent accidental leaking.
-2. Enter the name of the channel you want to listen for/respond to messages on into __Chat channel__.
+2. Enter the name of the channel you want to listen for/respond to messages on in __Channel__.
 3. Enter the command cooldown in seconds. _Default: 15s_
 4. Click the __Connect__ button.
 

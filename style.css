@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "Torus Pro";
+    src: url("assets/font/TorusPro-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Torus Pro";
+    src: url("assets/font/TorusPro-Bold.woff") format("woff");
+    font-weight: bold;
+}
+
+.container {
+    position: fixed;
+    width: 1024px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #202020;
+    box-shadow: 0px 0px 32px #000000;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px 16px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px 16px;
+}
+
+.valid {
+    border: 2px solid #606060;
+}
+
+.invalid {
+    border: 2px solid #ff4040;
+}
+
+.error {
+    color: #ff4040;
+    font-size: 32px;
+}
+
+.github {
+    font-size: 32px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 8px 8px;
+}
+
+.license {
+    font-size: 32px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px 8px;
+}
+
+body {
+    font-family: "Torus Pro";
+    background-color: #101010;
+    color: #ffffff;
+    font-size: 16px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #404040;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 4px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    font-family: "Torus Pro";
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #202020;
+    transition-duration: 250ms;
+}
+
+button:hover:enabled {
+    background-color: #606060;
+}
+
+button:disabled {
+    opacity: 50%;
+}
+
+input {
+    background-color: #404040;
+    border: 2px solid #606060;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 8px 8px;
+    text-align: left;
+    text-decoration: none;
+    outline: none;
+    font-size: 24px;
+    font-family: "Torus Pro";
+    transition-duration: 250ms;
+}
+
+input:disabled {
+    opacity: 50%;
+}
+
+input:focus:read-write {
+    border: 2px solid #808080;
+}

@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="style.css">
 		<title>osu!nppp</title>
-		<h1>osu!nppp - osu! twitch bot</h1>
 	</head>
 	<body>
-		<form>
-			<label for="token">Token:</label><br>
-			<input type="password" id="token" name="token" readonly="true">
-			<a href="https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=dl6k4oj0aiuyymn19opsclt6xyykbc&redirect_uri=https://jarran2r.github.io/osu-nppp&scope=user%3Abot+user%3Aread%3Achat+user%3Awrite%3Achat&force_verify=true"><button type="button" id="authorize">Authorize</button><br></a>
-			<label for="username">Chat channel:</label><br>
-			<input type="text" id="username" name="username">
-			<button type="button" onclick="connectBot()" id="connect">Connect</button><br>
-			<label for="cooldown">Cooldown (seconds):</label><br>
-			<input type="text" id="cooldown" name="cooldown" value="15">
-		</form>
-		<p>
-			format: artist - title [difficulty] (mapper) &lt;mode&gt;* +mods** | osu.ppy.sh/b/beatmapid | ###pp*** / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp<br>
-			<small>
-				*Mode is only visible if it is not osu!standard.<br>
-				**Mods are only visible if any are selected.<br>
-				***Current pp, only visible if the player is currently playing a map.<br>
-			</small>
-		</p>
-		<p>
-			so basically you click authorize and it'll bring you to a page to link the twitch account you wanna use for the bot (or just the streamer account like i like to do)<br>
-			and then you just put the channel name for the channel you want to have it listen and respond to commands, then you click connect and it'll connect<br>
-			<br>
-			<h2>also everything is client-sided so nothing is stored on a server<br></h2>
-			<h1>tosu must be running for this to work</h1>
-		</p>
-		<a href="https://github.com/Jarran2R/osu-nppp">GitHub</a>
+		<div class="container">
+			<div class="column">
+				<img src="assets/logo/osu!nppp.svg" width="1024px"></img>
+				<div>
+					<label for="token">Token:</label><br>
+					<div class="row">
+						<input type="password" id="token" name="token" readonly="true" style="width: 512px;" required placeholder="Token">
+						<a href="https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=dl6k4oj0aiuyymn19opsclt6xyykbc&redirect_uri=https://jarran2r.github.io/osu-nppp&scope=user%3Abot+user%3Aread%3Achat+user%3Awrite%3Achat&force_verify=true"><button type="button" id="authorize">Authorize</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div>
+						<label for="username">Channel:</label><br>
+						<input type="text" id="username" name="username" required placeholder="Channel" oninput="makeValid()">
+					</div>
+					<div>
+						<label for="cooldown">Cooldown (seconds):</label><br>
+						<input type="text" id="cooldown" name="cooldown" value="15" placeholder="Cooldown">
+					</div>
+				</div>
+				<div>
+					<button type="button" onclick="connectBot()" id="connect">Connect</button>
+				</div>
+				<div>
+					<label for="connect" id="message" name="message" class="error"></label>
+				</div>
+			</div>
+			<div>
+				<p>
+					<h2>Both osu! and tosu are REQUIRED to be open and running for the bot to work properly, otherwise the bot will eventually disconnect after sending a command.</h2><br>
+					All code is ran client-sided, and no information is sent/stored to any server other than Twitch.
+				</p>
+				<p>
+					<h2>Usage</h2>
+					<ol>
+						<li>Click the <b>Authorize</b> button, and authorize the twitch account you want to use as the bot. The token is hidden to prevent accidental leaking.</li>
+						<li>Enter the name of the channel you want to listen for/respond to messages on in <b>Channel</b>.</li>
+						<li>Enter the command cooldown in seconds. Default: 15s</li>
+						<li>Click the <b>Connect</b> button.</li>
+					</ol>
+					<i>You may not change the token or channel name while the bot is connected, but you can change the cooldown.</i>
+				</p>
+				<p>
+					<h2>Format</h2>
+					<b>!np</b>:<br>
+					@Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID<br>
+					<br>
+					<b>!nppp</b>:<br>
+					@Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID | ###pp*** / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp<br>
+					<br>
+					<small><i>
+						*Mode is only visible if it is not osu!standard.<br>
+						**Mods are only visible if any are selected.<br>
+						***Current pp, only visible if the player is currently playing a map.<br>
+					</i></small>
+				</p>
+			</div>
+		</div>
+		<div class="github">
+			Created by Jarran2R | <a href="https://github.com/Jarran2R/osu-nppp">GitHub</a>
+		</div>
+		<div class="license">
+			Licenced under <a href="https://github.com/Jarran2R/osu-nppp/blob/main/LICENSE">GPL-3.0</a>
+		</div>
 	</body>
 	<script src="osu.js"></script>
 	<script src="chat.js"></script>
