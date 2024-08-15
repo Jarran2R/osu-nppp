@@ -1,4 +1,4 @@
-const CLIENT_ID = 'dl6k4oj0aiuyymn19opsclt6xyykbc';
+const CLIENT_ID = 'dl6k4oj0aiuyymn19opsclt6xyykbc'; // this is entirely safe for me to show, view #9 at https://dev.twitch.tv/docs/authentication/register-app/
 const OAUTH_TOKEN = window.location.hash.split('access_token=')[1] ? window.location.hash.split('access_token=')[1].split('&')[0] : "";
 window.history.replaceState(window.history.state, "", "/osu-nppp/");
 
