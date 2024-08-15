@@ -5,7 +5,8 @@
 # osu!nppp
 
 [![GitHub License](https://img.shields.io/github/license/jarran2r/osu-nppp)](LICENSE)
-[![GitHub top language](https://img.shields.io/github/languages/top/jarran2r/osu-nppp)]()
+[![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/jarran2r/osu-nppp)](https://github.com/Jarran2R/osu-nppp/issues)
+[![GitHub Release](https://img.shields.io/github/v/release/jarran2r/osu-nppp)](https://github.com/Jarran2R/osu-nppp/releases)
 [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/jarran2r/osu-nppp)](https://www.codefactor.io/repository/github/jarran2r/osu-nppp/)
 
 osu!nppp | An osu! Twitch bot supporting !np and !nppp commands.
@@ -24,17 +25,18 @@ Visit [jarran2r.github.io/osu-nppp](https://jarran2r.github.io/osu-nppp) and fol
 > You may not change the token or channel name while the bot is connected, but you can change the cooldown.
 ## Format
 `!np`:
-> @Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID
+> @Sender | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID
 
 `!nppp`:
-> @Chatter | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID | ###pp*** / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp
+> @Sender | Artist - Title [Difficulty] (Mapper) &lt;Mode&gt;* +Mods** | osu.ppy.sh/b/BeatmapID | ###pp*** / 100%: ###pp, 99%: ###pp, 98%: ###pp, 95%: ###pp, 90%: ###pp
 
 <sup>_*Mode is only visible if it is not osu!standard._</sup>  
 <sup>_**Mods are only visible if any are selected._</sup>  
 <sup>_***Current pp, only visible if the player is currently playing a map._</sup>
 ## Roadmap
-- [x] Make commands not case-sensitive
 - [ ] Add `!pp` command for calculating user-defined accuracy of the current beatmap
+- [ ] Add ability to customize command message
+- [x] Make commands not case-sensitive
 - [x] Organize
   - [x] Site
   - [x] Code
