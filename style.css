@@ -18,7 +18,7 @@
     box-shadow: 0px 0px 32px #000000;
 }
 
-.margin {
+.description {
     margin-left: 32px;
     margin-right: 32px;
 }
@@ -31,7 +31,7 @@
     gap: 16px;
 }
 
-.column {
+.program {
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -36,29 +36,35 @@ async function handleWebSocketMessage(data) {
         case 'notification': // An EventSub notification has occurred, such as channel.chat.message
             switch (data.metadata.subscription_type) {
                 case 'channel.chat.message':
-                    // First, print the message to the program's console.
                     console.log(`MSG #${data.payload.event.broadcaster_user_login} <${data.payload.event.chatter_user_login}> ${data.payload.event.message.text}`);
-
-                    // Then check to see if that message was "HeyGuys"
-                    switch (data.payload.event.message.text.trim().toLowerCase()) {
-                        // If so, send back "VoHiYo" to the chatroom
-                        case "!nppp":
-                            var timeNow = new Date().getTime();
-                            if ((!timeThen) || (timeNow - timeThen > cooldown.value * 1000)) {
-                                sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")} |${await fetchData("pp")} 100%: ${await calculatePp(100)}pp, 99%: ${await calculatePp(99)}pp, 98%: ${await calculatePp(98)}pp, 95%: ${await calculatePp(95)}pp, 90%: ${await calculatePp(90)}pp`);
-                                timeThen = timeNow;
-                            };
-                            break;
-                        case "!np":
-                            var timeNow = new Date().getTime();
-                            if ((!timeThen) || (timeNow - timeThen > cooldown.value * 1000)) {
-                                sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")}`);
-                                timeThen = timeNow;
-                            };
-                        break;
-                    };
-
+                    if (document.getElementById("btmc").checked) {
+                        switch (data.payload.event.message.text.trim().toLowerCase()) {
+                            case "!np":
+                                var timeNow = new Date().getTime();
+                                if ((!timeThen) || (timeNow - timeThen > cooldown.value * 1000)) {
+                                    sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")} |${await fetchData("pp")} 100%: ${await calculatePp(100)}pp, 99%: ${await calculatePp(99)}pp, 98%: ${await calculatePp(98)}pp, 95%: ${await calculatePp(95)}pp, 90%: ${await calculatePp(90)}pp`);
+                                    timeThen = timeNow;
+                                };
+                                break;
+                            }
+                    } else {
+                        switch (data.payload.event.message.text.trim().toLowerCase()) {
+                            case "!nppp":
+                                var timeNow = new Date().getTime();
+                                if ((!timeThen) || (timeNow - timeThen > cooldown.value * 1000)) {
+                                    sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")} |${await fetchData("pp")} 100%: ${await calculatePp(100)}pp, 99%: ${await calculatePp(99)}pp, 98%: ${await calculatePp(98)}pp, 95%: ${await calculatePp(95)}pp, 90%: ${await calculatePp(90)}pp`);
+                                    timeThen = timeNow;
+                                };
+                                break;
+                            case "!np":
+                                var timeNow = new Date().getTime();
+                                if ((!timeThen) || (timeNow - timeThen > cooldown.value * 1000)) {
+                                    sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")}`);
+                                    timeThen = timeNow;
+                                };
+                        };
                     break;
+                    };
             };
             break;
     };

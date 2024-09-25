@@ -40,7 +40,6 @@ async function fetchData(type) {
 
                 const mapFormatted = `${beatmap.artist} - ${beatmap.title} [${beatmap.version}] (${beatmap.mapper})${modeName}${modsName} | ${id}`;
                 return mapFormatted;
-                break;
             case ("mods"):
                 return play.mods.number;
                 break;
@@ -62,7 +61,11 @@ async function calculatePp(acc) {
         }
             
         const data = await response.json();
-        let ppAmount = await data.pp.toFixed(2);
+        if (document.getElementById("btmc").checked) {
+            ppAmount = await data.pp.toFixed(0);
+        } else {
+            ppAmount = await data.pp.toFixed(2);
+        }
         return ppAmount;
     } catch (error) {
         console.error('it brokey but differently: ', error);

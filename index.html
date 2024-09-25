@@ -10,13 +10,13 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="column">
+			<div class="program">
 				<img src="assets/logo/osu!nppp.png" width="1024px"></img>
 				<div>
 					<label for="token">Token:</label><br>
 					<div class="row">
 						<input type="password" id="token" name="token" readonly="true" style="width: 512px;" required placeholder="Token">
-						<a href="https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=dl6k4oj0aiuyymn19opsclt6xyykbc&redirect_uri=https://jarran2r.github.io/osu-nppp&scope=user%3Abot+user%3Aread%3Achat+user%3Awrite%3Achat&force_verify=true"><button type="button" id="authorize">Authorize</button></a>
+						<a href="https://id.twitch.tv/oauth2/authorize?response_type=token&response_mode=form_post&client_id=dl6k4oj0aiuyymn19opsclt6xyykbc&redirect_uri=https://jarran2r.github.io/osu-nppp&scope=user%3Abot+user%3Aread%3Achat+user%3Awrite%3Achat&force_verify=true"><button type="button" id="authorize">Authorize</button></a>
 					</div>
 				</div>
 				<div class="row">
@@ -35,8 +35,11 @@
 				<div>
 					<label for="connect" id="message" name="message" class="error"></label>
 				</div>
+                <div>
+                    <input type="checkbox" id="btmc">BTMC Mode
+                </div>
 			</div>
-			<div class="margin">
+			<div class="description">
 				<p>
 					<h2>Both osu! and tosu are REQUIRED to be open and running for the bot to work properly, otherwise the bot will eventually disconnect after sending a command.</h2><br>
 					All code is ran client-sided, and no information is sent/stored to any server other than Twitch.
