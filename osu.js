@@ -44,7 +44,11 @@ async function fetchData(type) {
                 return play.mods.number;
                 break;
             case ("pp"):
-                return (state.number == 2 || state.number == 7) ? ` ${play.pp.current.toFixed(2)}pp /` : "";
+                if (document.getElementById("btmc").checked) {
+                    return (state.number == 2 || state.number == 7) ? ` ${play.pp.current.toFixed(0)}pp /` : "";
+                } else {
+                    return (state.number == 2 || state.number == 7) ? ` ${play.pp.current.toFixed(2)}pp /` : "";
+                }
         };
     } catch (error) {
         console.error('it brokey but differently: ', error);
