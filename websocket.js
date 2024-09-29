@@ -62,7 +62,21 @@ async function handleWebSocketMessage(data) {
                                     sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")}`);
                                     timeThen = timeNow;
                                 };
+                                break;
                         };
+
+                        if (data.payload.event.message.text.trim().split(" ")[0] == "!pp") {
+                            var percentage = parseInt(data.payload.event.message.text.trim().split(" ")[1], 10);
+                            console.log(typeof percentage, percentage);
+                            if (percentage >= 0 && percentage <= 100) {
+                                var timeNow = new Date().getTime();
+                                if ((!timeThen) || (timeNow - timeThen > cooldown.value * 1000)) {
+                                    sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")} |${await fetchData("pp")} ${percentage}%: ${await calculatePp(percentage)}pp`);
+                                    timeThen = timeNow;
+                                };
+
+                            }
+                        }
                     break;
                     };
             };
