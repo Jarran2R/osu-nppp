@@ -65,16 +65,15 @@ async function handleWebSocketMessage(data) {
                                 break;
                         };
 
-                        if (data.payload.event.message.text.trim().split(" ")[0] == "!pp") {
-                            var percentage = parseInt(data.payload.event.message.text.trim().split(" ")[1], 10);
-                            console.log(typeof percentage, percentage);
+                        var split_message = data.payload.event.message.text.trim().split(" ");
+                        if (split_message[0] == "!pp") {
+                            var percentage = parseFloat(split_message[1]).toFixed(2);
                             if (percentage >= 0 && percentage <= 100) {
                                 var timeNow = new Date().getTime();
                                 if ((!timeThen) || (timeNow - timeThen > cooldown.value * 1000)) {
                                     sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")} |${await fetchData("pp")} ${percentage}%: ${await calculatePp(percentage)}pp`);
                                     timeThen = timeNow;
                                 };
-
                             }
                         }
                     break;
