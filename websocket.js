@@ -42,7 +42,7 @@ async function handleWebSocketMessage(data) {
                             case "!np":
                                 var timeNow = new Date().getTime();
                                 if ((!timeThen) || (timeNow - timeThen > cooldown.value * 1000)) {
-                                    sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")} |${await fetchData("pp")} 100%: ${await calculatePp(100)}pp, 99%: ${await calculatePp(99)}pp, 98%: ${await calculatePp(98)}pp, 95%: ${await calculatePp(95)}pp, 90%: ${await calculatePp(90)}pp`);
+                                    sendChatMessage(`@${data.payload.event.chatter_user_name} | ${await fetchData("map")} | 100%: ${await calculatePp(100)}pp, 99%: ${await calculatePp(99)}pp, 98%: ${await calculatePp(98)}pp, 95%: ${await calculatePp(95)}pp, 90%: ${await calculatePp(90)}pp`);
                                     timeThen = timeNow;
                                 };
                                 break;
